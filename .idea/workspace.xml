@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f32320c7-a0b6-4dea-80a7-3e864fa5551a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonitoramentoEspacial/src/br/com/monitoramentoespacial/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MonitoramentoEspacial/src/br/com/monitoramentoespacial/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonitoramentoEspacial/src/br/com/monitoramentoespacial/model/DadosMissao.java" beforeDir="false" afterPath="$PROJECT_DIR$/MonitoramentoEspacial/src/br/com/monitoramentoespacial/model/DadosMissao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonitoramentoEspacial/src/br/com/monitoramentoespacial/main/TesteAutomacaoSistema.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +38,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.TesteAutomacaoSistema.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
