@@ -8,7 +8,7 @@ public class Main {
         Scanner leitor = new Scanner(System.in);
 
         //Inicializando os dados da missão
-        DadosMissao missao = new DadosMissao("X: 145.2, Y: 890.4, Z: -12.3", 100.0, 5, "FIAP2026");
+        DadosMissao missao = new DadosMissao("X: 145.2, Y: 890.4, Z: -12.3", 100.0, 5, "2CCPW2026");
 
         //Inicializando sensores
         SensorTemperatura termometro = new SensorTemperatura("ST-01", "Termômetro do Reator", 45.0);
@@ -74,23 +74,28 @@ public class Main {
                     System.out.print("Digite a senha de Comandante para alterações: ");
                     String senhaEscrita = leitor.nextLine();
 
-                    System.out.println("\nO que deseja alterar?");
-                    System.out.println("1. Atualizar Coordenadas/Rota");
-                    System.out.println("2. Consumo/Ajuste de Combustível");
-                    System.out.print("Opção: ");
-                    int subOpcao = leitor.nextInt();
-                    leitor.nextLine();
+                    if (missao.validarSenha(senhaEscrita)) {
+                        System.out.println("\nO que deseja alterar?");
+                        System.out.println("1. Atualizar Coordenadas/Rota");
+                        System.out.println("2. Consumo/Ajuste de Combustível");
+                        System.out.print("Opção: ");
+                        int subOpcao = leitor.nextInt();
+                        leitor.nextLine();
 
-                    if (subOpcao == 1) {
-                        System.out.print("Digite as novas coordenadas espaciais: ");
-                        String novasCoord = leitor.nextLine();
-                        missao.setCoordenadas(novasCoord, senhaEscrita);
-                    } else if (subOpcao == 2) {
-                        System.out.print("Digite o novo nível de combustível (%): ");
-                        double novoComb = leitor.nextDouble();
-                        missao.setCombustivel(novoComb, senhaEscrita);
+                        if (subOpcao == 1) {
+                            System.out.print("Digite as novas coordenadas espaciais: ");
+                            String novasCoord = leitor.nextLine();
+                            missao.setCoordenadas(novasCoord, senhaEscrita);
+                        } else if (subOpcao == 2) {
+                            System.out.print("Digite o novo nível de combustível (%): ");
+                            double novoComb = leitor.nextDouble();
+                            missao.setCombustivel(novoComb, senhaEscrita);
+                        } else {
+                            System.out.println("Opção inválida.");
+                        }
                     } else {
-                        System.out.println("Opção inválida.");
+                        // Se errar a senha, é expulso do menu imediatamente!
+                        System.out.println("ACESSO NEGADO: Senha de comandante incorreta");
                     }
                     break;
 

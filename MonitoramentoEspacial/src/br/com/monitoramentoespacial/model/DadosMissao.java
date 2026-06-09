@@ -16,7 +16,8 @@ public class DadosMissao {
 
     // método privado de validação
 
-    private boolean validarSenha(String senhaDigitada) {
+
+    public boolean validarSenha(String senhaDigitada) {
         return this.senhaAdmin.equals(senhaDigitada);
     }
 
@@ -28,7 +29,7 @@ public class DadosMissao {
         if (validarSenha(senhaDigitada)) {
             return this.coordenadas;
         }
-        return "[ACESSO NEGADO] Senha incorreta. Coordenadas retidas.";
+        return "ACESSO NEGADO: Senha incorreta. Coordenadas retidas.";
     }
 
     // leitura livre
