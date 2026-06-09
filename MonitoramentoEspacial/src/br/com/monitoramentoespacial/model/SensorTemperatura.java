@@ -83,9 +83,8 @@ public class SensorTemperatura extends ComponenteEspacial implements Sensor {
         if (verificarFuncionamento()) {
             System.out.println("Condição Física: OPERANTE.");
         } else {
-            System.out.println("Condição Física: FALHA CRÍTICA! Possível superaquecimento.");
+            System.out.println("Condição Física: FALHA CRÍTICA!");
         }
-        System.out.println("--------------------------------------------------\n");
     }
 
     //getter e setters
@@ -94,7 +93,6 @@ public class SensorTemperatura extends ComponenteEspacial implements Sensor {
         return limiteAlerta;
     }
     public void setLimiteAlerta(double limiteAlerta) {
-        // Validação científica de brinde: nada no universo é mais frio que -273.15 °C
         if (limiteAlerta < -273.15) {
             throw new IllegalArgumentException("Erro: Limite de temperatura não pode ser inferior a -273.15 °C.");
         }
