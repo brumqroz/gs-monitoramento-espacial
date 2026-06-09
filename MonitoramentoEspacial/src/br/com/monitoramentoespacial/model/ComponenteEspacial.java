@@ -58,4 +58,9 @@ public abstract class ComponenteEspacial {
     protected void setTemperatura(double temperatura) {
         this.temperatura = temperatura;
     }
+
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
 }
